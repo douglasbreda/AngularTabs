@@ -1,0 +1,13 @@
+<ul class="tabrow">
+    <li 
+        *ngFor="let tab of tabs" 
+        [class.active]="tab.active" (click)="selectTab(tab)"
+        [style.width]="width"
+        [style.height]="height">
+        <p class="tabrow__title">{{tab.title}}</p>
+        <p class="tabrow__subtitle">{{tab.subtitle}}</p>
+    </li>
+</ul>
+<ng-content>
+
+</ng-content>
